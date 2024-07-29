@@ -1,0 +1,23 @@
+{
+	"name": "home-hub",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"init-home": "./init.sh",
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"start": "concurrently pnpm:start:*",
+		"start:root": "cd root && pnpm start",
+		"start:home": "cd home && pnpm start -- --port 8500",
+		"start:navbar": "cd navbar && pnpm start -- --port 8501",
+		"start:lights": "cd lights && pnpm start -- --port 8502",
+		"start:dashboard": "cd dashboard && pnpm start -- --port 8503",
+		"start:user": "cd user && pnpm start -- --port 8504"
+	},
+	"keywords": [],
+	"author": "Gabriel Rocha <github.com/gabrielrochas>",
+	"license": "ISC",
+	"devDependencies": {
+		"concurrently": "^8.2.2"
+	}
+}
